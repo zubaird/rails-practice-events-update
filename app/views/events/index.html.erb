@@ -1,0 +1,26 @@
+<h1>Events</h1>
+
+<%= link_to "New Event", new_event_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Capacity</th>
+      <th>Requires ID</th>
+      <th>Directions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.description %></td>
+        <td><%= event.date %></td>
+        <td><%= event.capacity %></td>
+        <td><%= event.requires_id %></td>
+        <td><%= event.directions %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
